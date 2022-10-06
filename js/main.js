@@ -44,17 +44,14 @@ const esOperacion = (operacion) => {
 
 //----- Inicio calculadora -----
 do {
-  //-----Pido número A y valido que el numero A sea un numero-----
   let numeroA = prompt("Introduzca el primer número");
   console.log(`El primer número es: ${numeroA}`);
   numeroA = esNumero(numeroA);
 
-  //-----Pido número B y valido que el numero A sea un numero-----
   let numeroB = prompt("Introduzca el segundo número");
   console.log(`El segundo número es: ${numeroB}`);
   numeroB = esNumero(numeroB);
 
-  //-----Pido la operacion y valido si es correcta-----
   let operacion = esOperacion(
     prompt("Introduzca una operación: suma, resta, multiplicación o división")
   );
@@ -88,7 +85,11 @@ do {
 
   //----- Filtro de números negativos -----
   const numerosNegativos = arrayResultados.filter((numero) => numero < 0);
-  console.log(`Lista de números negativos:${numerosNegativos}`);
+  console.log(`Lista de números negativos: ${numerosNegativos}`);
+
+  // ----- Encontrar primer numero mayor a 50 -----
+  const numeroMayorACincuenta = arrayResultados.find((numero) => numero > 50);
+  console.log(`Número mayor a 50: ${numeroMayorACincuenta}`);
 
   nuevaIteracion = prompt("¿Desea realizar otra operación? (Si o No)");
 
